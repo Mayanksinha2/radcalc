@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Radius</title>
+    <script>
+     var f,a;
+     function check(f){
+        var a=window.event.keyword;
+        if(!(a>=48 && a<=57)){
+            alert("Type the number between 0 & 9");
+        }
+     }
+     function circle(a){
+        this.radius=a;
+        this.area=Math.PI*a*a;
+        this.circumference=2*Math.PI*a;
+     }
+     function calc (f){
+       var c = new circle(f.radius.value);
+        f.area.value= c.area;
+        f.circumference.value= c.circumference;
+     }
+    </script>
+</head>
+<body bgcolor="yellow">
+    <br><br>
+   
+    <center>
+    <h3>Enter the Radius of the Circle and press calculate buton to get Area and Circumference.</h3>
+    <br><br>
+    <form>
+    <pre>
+        Radius           <input type="text" name="radius"><br>
+        Area             <input type="text" name="area"> <br>
+        Circumference    <input type="text" name="circumference"><br><br>
+                    <input type="button" value="Calculate" onClick="calc(this.form)"><br>
+            
+    </pre>
+</form>
+</center>
+
+</body>
+</html>
